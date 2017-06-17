@@ -1,0 +1,38 @@
+# version 3
+version: "3"
+
+# declarando o serviço [wordpress]
+services:
+ wp-fornecedores:
+  image: wp-fornecedores:1.0.0-TGL
+  command: ./start.sh
+  ports:
+   - "80:80"
+  networks:
+   - tgl
+  deploy:
+   labels: [APP=WP]
+   mode: replicated
+   replicas: 2
+   update_config:
+    parallelism: 1
+   restart_policy:
+    condition: on-failure
+    delay: 10s
+    max_attempts: 5
+    window: 180s
+  volumes:
+   - wordpress:/var/www/html/
+
+# network
+networks:
+ tgl:
+  driver: bridge
+  ipam:
+   config:
+    - subnet: 10.10.10.0/24
+
+volumes:
+ wordpress:
+  external:
+   name: wordpress
