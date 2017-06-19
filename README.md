@@ -1,14 +1,15 @@
+### Docker Container WordPress + Nginx + PHP7
 <pre>
-$ sudo docker volume create wordpress
+$ docker volume create wordpress
 wordpress
 </pre>
 
 <pre>
-docker build -f build/Dockerfile -t wp-fornecedores:1.0.0-TGL .
+$ docker build -f build/Dockerfile -t wp-fornecedores:1.0.0-TGL .
 </pre>
 
 <pre>
-docker-compose up -d 
+$ docker-compose up -d 
 </pre>
 
 <pre>
