@@ -20,3 +20,5 @@ Step 4 - CMS
 <pre>
 http://127.0.0.1
 </pre>
+
+Step 5 - Configure /var/www/html/wordpress/wp-config.php
