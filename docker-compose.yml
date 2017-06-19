@@ -1,7 +1,7 @@
 # version 3
 version: "3"
 
-# declarando o serviço [wordpress]
+# service
 services:
  wp-fornecedores:
   image: wp:1.0.0-TGL
@@ -32,6 +32,7 @@ networks:
    config:
     - subnet: 10.10.10.0/24
 
+# volumes
 volumes:
  wordpress:
   external:
