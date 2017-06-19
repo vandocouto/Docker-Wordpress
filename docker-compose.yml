@@ -4,7 +4,7 @@ version: "3"
 # declarando o serviço [wordpress]
 services:
  wp-fornecedores:
-  image: wp-fornecedores:1.0.0-TGL
+  image: wp:1.0.0-TGL
   command: ./start.sh
   ports:
    - "80:80"

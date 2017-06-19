@@ -8,7 +8,7 @@ wordpress
 
 Step 2 - Build image 
 <pre>
-$ docker build -f build/Dockerfile -t wp-fornecedores:1.0.0-TGL .
+$ docker build -f build/Dockerfile -t wp:1.0.0-TGL .
 </pre>
 
 Step 3 - Container up
