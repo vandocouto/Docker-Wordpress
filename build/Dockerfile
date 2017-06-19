@@ -2,9 +2,6 @@
 FROM ubuntu:16.04
 MAINTAINER Evandro Couto "vandocouto@gmail.com"
 
-# DIR
-WORKDIR /var/www/html
-
 # RUN
 RUN apt-get update && apt-get install python-software-properties software-properties-common -y && \
     add-apt-repository ppa:nginx/stable && \
