@@ -5,7 +5,7 @@ MAINTAINER Evandro Couto "vandocouto@gmail.com"
 # Dir
 WORKDIR /var/www/html/
 
-# RUN
+# Run
 RUN apt-get update && apt-get install python-software-properties software-properties-common -y && \
     add-apt-repository ppa:nginx/stable && \
     apt-get update && apt-get install nginx -y && \
