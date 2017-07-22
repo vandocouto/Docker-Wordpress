@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install python-software-properties software-proper
     apt-get update && apt-get install nginx -y && \
     apt-get install vim passwd ifstat unzip net-tools curl nginx php7.0-fpm php7.0-cli php7.0-gd php7.0-dev php7.0-json php7.0-mysql php7.0-xml php7.0-xmlrpc php7.0-imap php7.0-mbstring php7.0-zip telnet wget openssh-server apt-utils php-redis -y && \
     rm -rf /var/lib/apt/lists/* && \
+    rm /var/www/html/index.nginx-debian.html && \
     wget https://wordpress.org/latest.zip && \
     unzip latest.zip && \
     chown www-data.www-data -R /var/www/html && \
