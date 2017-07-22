@@ -2,6 +2,9 @@
 FROM ubuntu:16.04
 MAINTAINER Evandro Couto "vandocouto@gmail.com"
 
+# Dir
+WORKDIR /var/www/html/
+
 # RUN
 RUN apt-get update && apt-get install python-software-properties software-properties-common -y && \
     add-apt-repository ppa:nginx/stable && \
@@ -22,7 +25,7 @@ RUN apt-get update && apt-get install python-software-properties software-proper
     rm /etc/nginx/sites-available/default && \
     rm /etc/php/7.0/fpm/pool.d/www.conf
 
-# DIR
+# Dir
 WORKDIR /
 
 # COPY
